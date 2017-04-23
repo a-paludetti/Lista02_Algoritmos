@@ -5,21 +5,28 @@
  */
 package lista02_algoritmos;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Wynter
  */
-public class Es_10 {
+public class Es_11 {
 
     public static void main(String[] args) {
-        double j = 1;
+        Scanner NN = new Scanner(System.in);
+        System.out.print("Digite um número: ");
+        double N1 = NN.nextDouble();
+        double sinal = -1;
         int i = 1;
         double soma = 0;
+        double j = 1;
+
         do {
             soma = soma + j;
-            j = (j / (j + 1));
+            j = (j / (j + 1)) * sinal;
             i++;
-        } while (i <= 20);
-        System.out.printf("resultado: %.3f", soma);
+        } while (i <= N1);
+        System.out.print("Soma: " + soma);
     }
 }
